@@ -251,7 +251,7 @@ class TypesSymbols(Enum):
     def loadIcon(iconName):
         if(iconName==""): return ""
         img = (Image.open(f"src/{iconName}.png"))
-        resizedImage = img.resize((50,50), Image.ANTIALIAS)
+        resizedImage = img.resize((50,50), Image.LANCZOS)
         imgResult = ImageTk.PhotoImage(resizedImage)
         return imgResult
 
